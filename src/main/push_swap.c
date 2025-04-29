@@ -6,7 +6,7 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:16:14 by olcherno          #+#    #+#             */
-/*   Updated: 2025/03/07 17:55:41 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/04/29 16:01:12 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 		return (1);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
-	init_stack_a(&a, argv + 1);  
+	init_stack_a(&a, argv + 1);
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)
@@ -39,3 +39,4 @@ int	main(int argc, char **argv)
 
 // int a = 777;
 // ft_printf("%d\n", a);
+//

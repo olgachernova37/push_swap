@@ -6,7 +6,7 @@
 #    By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 15:18:15 by olcherno          #+#    #+#              #
-#    Updated: 2025/03/06 18:07:39 by olcherno         ###   ########.fr        #
+#    Updated: 2025/04/29 17:24:09 by olcherno         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJDIR = obj
 LIBFTDIR = libs/libft
 FTPRINTF_DIR = libs/libftprintf
 
-SRC_OP = main/test1.c #main code 
+SRC_OP = main/push_swap.c main/stack_init.c#main code 
 SRC_DATA = data/get_data.c
 SRC = $(SRC_OP) $(SRC_DATA)
 

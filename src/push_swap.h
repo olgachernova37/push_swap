@@ -6,7 +6,7 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:26:08 by olcherno          #+#    #+#             */
-/*   Updated: 2025/03/06 18:21:09 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:04:16 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_stack_node
 	int					push_cost;
 	bool				above_median;
 	bool				cheapest;
+
 	struct s_stack_node	*target_node;
 	struct s_stack_node	*next;
 	struct s_stack_node	*prev;

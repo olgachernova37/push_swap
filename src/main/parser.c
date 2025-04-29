@@ -1,28 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_init.c                                       :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/06 19:27:22 by olcherno          #+#    #+#             */
-/*   Updated: 2025/04/29 17:31:54 by olcherno         ###   ########.fr       */
+/*   Created: 2025/03/06 19:28:18 by olcherno          #+#    #+#             */
+/*   Updated: 2025/04/29 17:41:55 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
-
-
-
-
-void	init_stack_a(t_stack_node **a, char **argv)
-{
-	long	nbr;
-	int		index;
-
-	index = 0;
-	if (error_check(argv[index]))
-	{
-		
-	}
-}

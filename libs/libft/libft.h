@@ -6,7 +6,7 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:27:26 by olcherno          #+#    #+#             */
-/*   Updated: 2025/03/06 18:23:53 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:03:49 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-
 
 /* libc */
 int		ft_atoi(const char *str);
