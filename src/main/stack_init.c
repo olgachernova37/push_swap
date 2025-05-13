@@ -6,23 +6,78 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:27:22 by olcherno          #+#    #+#             */
-/*   Updated: 2025/04/29 17:31:54 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/13 16:37:10 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+// str to long int
+static long	ft_atoli(const char *str) 
+{
+	long	nbr;
+	int		sign;
 
+	nbr = 0;
+	sign = 1;
+	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\r'
+		|| *str == '\f' || *str == '\v')
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while (ft_isdigit(*str))
+		nbr = nbr * 10 + (*str++ - '0');
+	return (nbr * sign);
+}
 
+static void	append_node(t_stack_node **a, int n)
+{
+	t_stack_node	*new_node;
+	t_stack_node	*l_node;
 
-void	init_stack_a(t_stack_node **a, char **argv)
+	if (!a)
+		return ;
+	new_node = malloc(sizeof(t_stack_node));
+	if (!new_node)
+		return ;
+	new_node->next = NULL;
+	new_node->nbr = n;
+	new_node->min_commands = 0;
+	if (!(*a))
+	{
+		*a = new_node;
+		new_node->prev = NULL;
+	}
+	else
+	{
+		l_node = find_last_node(*a);
+		l_node->next = new_node;
+		new_node->prev = l_node;
+	}
+}
+
+void	fill_stack_a(t_stack_node **a, char **argv)
 {
 	long	nbr;
 	int		index;
 
 	index = 0;
-	if (error_check(argv[index]))
+	while (argv[index])
 	{
-		
+		if (error_check(argv[index]))
+		{
+			free_pars_errors(a);
+		}
+		nbr = ft_atoli(argv[index]);
+		if (nbr > INT_MAX || nbr < INT_MIN)
+			free_pars_errors(a);
+		if (duplicate_errors(*a, (int)nbr))
+			free_pars_errors(a);
+		append_node(a, (int)nbr);
+		index++;
 	}
 }
