@@ -6,11 +6,11 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:16:14 by olcherno          #+#    #+#             */
-/*   Updated: 2025/05/13 16:20:33 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:49:35 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	main(int argc, char **argv)
 {
@@ -28,12 +28,12 @@ int	main(int argc, char **argv)
 	{
 		if (stack_length(a) == 2)
 			sa(&a, false);
-		else if (stack_len(a) == 3)
+		else if (stack_length(a) == 3)
 			sort_three(&a);
 		else
-			sort_stacks(&a, &b);
+			sorting(&a, &b);
 	}
-	free_stack(&a);
+	free_stack_errors(&a);
 	return (0);
 }
 

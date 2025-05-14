@@ -6,7 +6,7 @@
 #    By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 15:18:15 by olcherno          #+#    #+#              #
-#    Updated: 2025/04/29 17:24:09 by olcherno         ###   ########.fr        #
+#    Updated: 2025/05/14 15:58:12 by olcherno         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,8 @@ OBJDIR = obj
 LIBFTDIR = libs/libft
 FTPRINTF_DIR = libs/libftprintf
 
-SRC_OP = main/push_swap.c main/stack_init.c#main code 
-SRC_DATA = data/get_data.c
+SRC_OP = main/push_swap.c main/errors.c main/set_param_a_to_b.c main/set_param_b_to_a.c main/sort_three.c main/sorting.c  main/stack_commands.c  main/stack_initialisation.c
+SRC_DATA = commands/push.c commands/swap.c commands/rotate.c commands/r_rotate.c
 SRC = $(SRC_OP) $(SRC_DATA)
 
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
@@ -32,7 +32,7 @@ $(NAME): $(OBJS) $(LIBFTDIR)/libft.a $(FTPRINTF_DIR)/libftprintf.a
 
 # Create necessary directories for object files
 $(OBJDIR):
-	mkdir -p $(OBJDIR)/main $(OBJDIR)/data
+	mkdir -p $(OBJDIR)/main $(OBJDIR)/commands
 
 # Compile source files to object files
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)

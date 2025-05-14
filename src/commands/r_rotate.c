@@ -6,14 +6,14 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:26:37 by olcherno          #+#    #+#             */
-/*   Updated: 2025/05/13 17:26:34 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:56:15 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 // Define a funtion that rotates a stack's bottom node, to the top
-static void	rev_rotate(t_stack_node **stack)
+void	r_rotate(t_stack_node **stack)
 {
 	t_stack_node	*last;
 
@@ -30,22 +30,22 @@ static void	rev_rotate(t_stack_node **stack)
 // Rotate the bottom of `a` to the top
 void	rra(t_stack_node **a, bool print)
 {
-	rev_rotate(a);
+	r_rotate(a);
 	if (!print)
 		ft_printf("rra\n");
 }
 
 void	rrb(t_stack_node **b, bool print)
 {
-	rev_rotate(b);
+	r_rotate(b);
 	if (!print)
 		ft_printf("rrb\n");
 }
 
 void	rrr(t_stack_node **a, t_stack_node **b, bool print)
 {
-	rev_rotate(a);
-	rev_rotate(b);
+	r_rotate(a);
+	r_rotate(b);
 	if (!print)
 		ft_printf("rrr\n");
 }

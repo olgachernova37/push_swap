@@ -6,13 +6,13 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:26:37 by olcherno          #+#    #+#             */
-/*   Updated: 2025/05/13 16:46:19 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:56:25 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	push(t_stack_node **dest, t_stack_node **src)
+void	push(t_stack_node **dest, t_stack_node **src)
 {
 	t_stack_node	*temp;
 
