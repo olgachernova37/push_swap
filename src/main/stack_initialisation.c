@@ -6,14 +6,14 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:27:22 by olcherno          #+#    #+#             */
-/*   Updated: 2025/05/14 15:55:10 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/19 18:20:49 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 // str to long int
-long	ft_atoli(const char *str) 
+long	ft_atoli(const char *str)
 {
 	long	nbr;
 	int		sign;
@@ -46,7 +46,6 @@ t_stack_node	*search_cheapest(t_stack_node *a)
 	}
 	return (NULL);
 }
-
 
 void	append_node(t_stack_node **a, int n)
 {
@@ -96,7 +95,8 @@ void	fill_stack_a(t_stack_node **a, char **argv)
 	}
 }
 
-void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name)
+void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
+		char stack_name)
 {
 	while (*stack != top_node)
 	{
@@ -113,6 +113,6 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name
 				rb(stack, false);
 			else
 				rrb(stack, false);
-		}	
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:28:46 by olcherno          #+#    #+#             */
-/*   Updated: 2025/05/14 18:41:09 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/19 18:25:16 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	rot_a_b(t_stack_node **a, t_stack_node **b,
 	set_index(*b);
 }
 
-void	rev_rot_a_b(t_stack_node **a, t_stack_node **b, t_stack_node *pointer_cheapest)
+void	rev_rot_a_b(t_stack_node **a, t_stack_node **b,
+		t_stack_node *pointer_cheapest)
 {
 	while (*b != pointer_cheapest->target_node && *a != pointer_cheapest)
 		rrr(a, b, false);
@@ -49,17 +50,6 @@ void	push_b_to_a(t_stack_node **a, t_stack_node **b)
 {
 	prep_for_push(a, (*b)->target_node, 'a');
 	pa(a, b, false);
-}
-
-void	is_top_min(t_stack_node **a)
-{
-	while ((*a)->nbr != find_min_nbr(*a)->nbr)
-	{
-		if (find_min_nbr(*a)->above_mid)
-			ra(a, false);
-		else
-			rra(a, false);
-	}
 }
 
 void	sorting(t_stack_node **a, t_stack_node **b)

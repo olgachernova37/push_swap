@@ -6,7 +6,7 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:27:53 by olcherno          #+#    #+#             */
-/*   Updated: 2025/05/14 15:54:53 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/19 18:22:24 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	set_index(t_stack_node *a)
 {
-	int	i; 
+	int	i;
 	int	mid;
 
 	i = 0;
@@ -28,17 +28,17 @@ void	set_index(t_stack_node *a)
 			a->above_mid = true;
 		else
 			a->above_mid = false;
-		a = a->next; 
+		a = a->next;
 		i++;
 	}
 }
 
-//Find `a` node's target in stack `b`
+// Find `a` node's target in stack `b`
 void	find_target_a(t_stack_node *a, t_stack_node *b)
 {
-	t_stack_node	*cur_b; 
-	t_stack_node	*target; 
-	long			closest_s_nbr; 
+	t_stack_node	*cur_b;
+	t_stack_node	*target;
+	long			closest_s_nbr;
 
 	while (a)
 	{
@@ -61,7 +61,7 @@ void	find_target_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
-//sum of the number of instructions for both the nodes to rotate to the top of their stacks
+// both the nodes to rotate to the top of their stacks
 void	set_steps_a(t_stack_node *a, t_stack_node *b)
 {
 	int	size_a;
@@ -76,7 +76,7 @@ void	set_steps_a(t_stack_node *a, t_stack_node *b)
 			a->steps_to_push = size_a - (a->index);
 		if (a->target_node->above_mid)
 			a->steps_to_push += a->target_node->index;
-		else 
+		else
 			a->steps_to_push += size_b - (a->target_node->index);
 		a = a->next;
 	}
@@ -84,25 +84,25 @@ void	set_steps_a(t_stack_node *a, t_stack_node *b)
 
 void	find_cheapest(t_stack_node *stack)
 {
-	long			value_cheapest; 
+	long			value_cheapest;
 	t_stack_node	*pointer_cheapest;
 
 	if (!stack)
 		return ;
-	value_cheapest = LONG_MAX; 
+	value_cheapest = LONG_MAX;
 	while (stack)
 	{
-		if (stack->steps_to_push < value_cheapest) 
+		if (stack->steps_to_push < value_cheapest)
 		{
 			value_cheapest = stack->steps_to_push;
 			pointer_cheapest = stack;
 		}
-		stack = stack->next; 
+		stack = stack->next;
 	}
 	pointer_cheapest->min_commands = true;
 }
 
-void	set_param_a_to_b(t_stack_node *a, t_stack_node *b) //Define a function that combines all the functions needed to prepare stack `a`, ready for our pushing and sorting. These functions set the data inside the node's structure
+void	set_param_a_to_b(t_stack_node *a, t_stack_node *b)
 {
 	set_index(a);
 	set_index(b);
