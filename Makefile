@@ -6,20 +6,20 @@
 #    By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 15:18:15 by olcherno          #+#    #+#              #
-#    Updated: 2025/05/14 15:58:12 by olcherno         ###   ########.fr        #
+#    Updated: 2025/05/19 17:42:26 by olcherno         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 CC = cc # cc 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 NAME = push_swap
 SRCDIR = src
 OBJDIR = obj
 LIBFTDIR = libs/libft
 FTPRINTF_DIR = libs/libftprintf
 
-SRC_OP = main/push_swap.c main/errors.c main/set_param_a_to_b.c main/set_param_b_to_a.c main/sort_three.c main/sorting.c  main/stack_commands.c  main/stack_initialisation.c
+SRC_OP = main/push_swap.c main/errors.c main/fft_split.c main/set_param_a_to_b.c main/set_param_b_to_a.c main/sort_three.c main/sorting.c  main/stack_commands.c  main/stack_initialisation.c
 SRC_DATA = commands/push.c commands/swap.c commands/rotate.c commands/r_rotate.c
 SRC = $(SRC_OP) $(SRC_DATA)
 

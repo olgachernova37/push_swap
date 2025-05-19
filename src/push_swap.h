@@ -6,7 +6,7 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:26:08 by olcherno          #+#    #+#             */
-/*   Updated: 2025/05/14 15:53:51 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/19 17:10:40 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void					ss(t_stack_node **a, t_stack_node **b, bool print);
 
 t_stack_node	*search_cheapest(t_stack_node *a);
 void	rot_a_b(t_stack_node **a, t_stack_node **b, t_stack_node *pointer_cheapest);
-void	rev_rot_a_b(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest_node);
+void	rev_rot_a_b(t_stack_node **a, t_stack_node **b, t_stack_node *pointer_cheapest);
 void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name);
 void	push_b_to_a(t_stack_node **a, t_stack_node **b);
 void	push_a_to_b(t_stack_node **a, t_stack_node **b);
@@ -84,4 +84,11 @@ void	set_param_b_to_a(t_stack_node *a, t_stack_node *b);
 void	find_target_b(t_stack_node *a, t_stack_node *b);
 void	is_top_min(t_stack_node **a);
 
+
+
+
+
+char **fft_split(char *s, char c);
+int	count_words(char *s, char c);
+char	*get_next_word(char *s, char c);
 #endif

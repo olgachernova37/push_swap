@@ -6,7 +6,7 @@
 /*   By: olcherno <olcherno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:28:46 by olcherno          #+#    #+#             */
-/*   Updated: 2025/05/14 15:54:40 by olcherno         ###   ########.fr       */
+/*   Updated: 2025/05/14 18:41:09 by olcherno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ void	rot_a_b(t_stack_node **a, t_stack_node **b,
 	set_index(*b);
 }
 
-void	rev_rot_a_b(t_stack_node **a, t_stack_node **b,
-		t_stack_node *pointer_cheapest)
+void	rev_rot_a_b(t_stack_node **a, t_stack_node **b, t_stack_node *pointer_cheapest)
 {
 	while (*b != pointer_cheapest->target_node && *a != pointer_cheapest)
 		rrr(a, b, false);
